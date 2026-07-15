@@ -1,0 +1,253 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #f37022; /* Logo Orange */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 50px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.top-bar .top-social a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #0e2b5c; /* Logo Deep Blue */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Layout */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.site-logo {
+    height: 60px; /* लोगो का साइज सेट करने के लिए */
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text .main-title {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
+.logo-text .sub-title {
+    font-size: 14px;
+    color: #f37022; /* Orange Accent */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f37022;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(14, 43, 92, 0.8), rgba(14, 43, 92, 0.8)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200') no-repeat center center/cover;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.affiliation-badge {
+    font-size: 18px;
+    color: #f37022;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #f37022;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(243, 112, 34, 0.4);
+}
+
+.btn:hover {
+    background-color: white;
+    color: #0e2b5c;
+    transform: translateY(-3px);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 40px;
+    background-color: #f8f9fa;
+}
+
+.box {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    width: 30%;
+    transition: 0.3s;
+    border-top: 5px solid #f37022;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.box h3 {
+    margin-bottom: 15px;
+    color: #0e2b5c;
+    font-size: 20px;
+}
+
+.box p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Gallery & Admission Forms Basic Styling */
+.gallery-section, .admission-section {
+    padding: 60px 50px;
+    text-align: center;
+}
+.gallery-section h2, .admission-section h2 {
+    color: #0e2b5c;
+    margin-bottom: 30px;
+}
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.gallery-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 15px;
+}
+.form-container input, .form-container select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.submit-btn {
+    background-color: #0e2b5c;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.submit-btn:hover {
+    background-color: #f37022;
+}
+
+/* Footer & Contact Section */
+footer {
+    background-color: #0e2b5c;
+    color: white;
+    padding: 40px 50px 20px 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
+}
+
+.footer-about, .footer-contact {
+    width: 45%;
+}
+
+.footer-about h3, .footer-contact h3 {
+    color: #f37022;
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
