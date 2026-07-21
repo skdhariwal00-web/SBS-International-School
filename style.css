@@ -716,3 +716,15 @@ footer {
 .top-social a i {
     font-size: 16px;
 }
+/* Optional: Circle Background for Top Bar Icons */
+.top-social .fa-brands {
+    background-color: #ffffff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
