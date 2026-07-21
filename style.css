@@ -679,3 +679,40 @@ footer {
         font-size: 28px;
     }
 }
+/* Social Media Icons Original Colors */
+
+/* Top Bar Links & Icons Styling */
+.top-social a {
+    text-decoration: none;
+    margin-left: 12px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Hover Effect */
+.top-social a:hover {
+    transform: translateY(-2px);
+}
+
+/* WhatsApp - Original Green Color */
+.top-social a.wa, .footer-social-links a.wa {
+    color: #25D366 !important;
+}
+
+/* Facebook - Original Blue Color */
+.top-social a.fb, .footer-social-links a.fb {
+    color: #1877F2 !important;
+}
+
+/* Instagram - Original Brand Gradient Color */
+.top-social a.insta, .footer-social-links a.insta {
+    color: #E1306C !important;
+}
+
+/* Top bar text contrast improvement */
+.top-social a i {
+    font-size: 16px;
+}
