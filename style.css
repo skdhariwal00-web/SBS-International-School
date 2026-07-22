@@ -8,7 +8,7 @@
 
 /* Top Bar */
 .top-bar {
-    background-color: #6f42c1;
+    background-color: #f37022;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -716,15 +716,65 @@ footer {
 .top-social a i {
     font-size: 16px;
 }
-/* Optional: Circle Background for Top Bar Icons */
-.top-social .fa-brands {
-    background-color: #ffffff;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
+/* Top Bar Main Structure */
+.top-bar {
+    background-color: #f37022;
+    color: white;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 8px 50px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.top-bar .top-info span {
+    margin-right: 15px;
+}
+
+/* Social Buttons Container */
+.top-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Individual Social Icon Links */
+.top-social a {
+    text-decoration: none;
+    font-weight: 600;
     font-size: 13px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background-color: #ffffff; /* White Pill Background */
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top-social a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Original WhatsApp Green Color */
+.top-social a.wa, .footer-social-links a.wa {
+    color: #25D366 !important;
+}
+
+/* Original Facebook Blue Color */
+.top-social a.fb, .footer-social-links a.fb {
+    color: #1877F2 !important;
+}
+
+/* Original Instagram Color */
+.top-social a.insta, .footer-social-links a.insta {
+    color: #E1306C !important;
+}
+
+/* Icon Sizing */
+.top-social a i {
+    font-size: 15px;
 }
