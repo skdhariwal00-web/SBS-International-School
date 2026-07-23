@@ -778,3 +778,12 @@ footer {
 .top-social a i {
     font-size: 15px;
 }
+/* Quote block highlight */
+.principal-content p.closing-quote {
+    font-style: italic;
+    color: #0e2b5c;
+    border-left: 3px solid #f37022;
+    padding-left: 12px;
+    margin: 18px 0;
+    font-weight: 500;
+}
