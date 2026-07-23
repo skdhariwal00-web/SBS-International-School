@@ -787,3 +787,114 @@ footer {
     margin: 18px 0;
     font-weight: 500;
 }
+/* ==========================================
+   PRINCIPAL MESSAGE SECTION
+   ========================================== */
+.principal-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    border-top: 2px solid #f0f0f0;
+}
+
+.principal-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.principal-image {
+    flex: 0 0 320px;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-top: 4px solid #f37022;
+}
+
+.principal-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.principal-title h3 {
+    color: #0e2b5c;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.principal-title p {
+    color: #f37022;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.principal-content {
+    flex: 1;
+    text-align: left;
+}
+
+.badge-principal {
+    background-color: #e6f0ff;
+    color: #0e2b5c;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.principal-content h2 {
+    color: #0e2b5c;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.principal-content p.greeting {
+    font-weight: bold;
+    color: #0e2b5c;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.principal-content p {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.signature {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px dashed #ccc;
+}
+
+.signature p.name {
+    color: #0e2b5c;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.signature p.designation {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Responsive view */
+@media (max-width: 768px) {
+    .principal-container {
+        flex-direction: column;
+    }
+    .principal-image {
+        width: 100%;
+        flex: none;
+    }
+}
