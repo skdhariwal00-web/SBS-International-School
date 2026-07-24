@@ -1,3 +1,4 @@
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +14,6 @@ body {
     background-color: #ffffff;
     color: #333333;
     width: 100%;
-    overflow-x: hidden;
 }
 
 /* Top Bar */
@@ -48,13 +48,19 @@ body {
     padding: 4px 12px;
     background-color: #ffffff;
     border-radius: 20px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.top-social a:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
 }
 
 .top-social a.wa { color: #25D366 !important; }
 .top-social a.fb { color: #1877F2 !important; }
 .top-social a.insta { color: #E1306C !important; }
 
-/* Header */
+/* Header & Navigation */
 header {
     background-color: #0e2b5c;
     color: white;
@@ -65,6 +71,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 .logo-container {
@@ -103,6 +110,8 @@ nav ul li a {
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -129,7 +138,7 @@ nav ul li a:hover {
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
 .slide.active {
@@ -141,9 +150,10 @@ nav ul li a:hover {
     max-width: 800px;
     text-align: center;
     padding: 25px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.55);
     border-radius: 12px;
     color: white;
+    backdrop-filter: blur(4px);
 }
 
 .admission-badge-large {
@@ -171,23 +181,131 @@ nav ul li a:hover {
     border-radius: 25px;
     display: inline-block;
     margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #d65c13;
+    transform: translateY(-2px);
 }
 
 .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(243, 112, 34, 0.8);
+    background: rgba(243, 112, 34, 0.85);
     color: white;
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: rgba(243, 112, 34, 1);
 }
 
 .prev-btn { left: 15px; }
 .next-btn { right: 15px; }
+
+/* AI Feature Section */
+.ai-feature-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0e2b5c 0%, #1a458a 100%);
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.ai-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.badge-ai {
+    background-color: #f37022;
+    color: #ffffff;
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.ai-container h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.ai-subtitle {
+    font-size: 16px;
+    color: #d1e0ff;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.ai-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.ai-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: left;
+}
+
+.ai-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    border-color: #f37022;
+}
+
+.ai-card-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.ai-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.ai-card:hover .ai-card-image img {
+    transform: scale(1.08);
+}
+
+.ai-card-content {
+    padding: 20px;
+}
+
+.ai-card-content h3 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.ai-card-content p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.5;
+}
 
 /* Principal Section */
 .principal-section {
@@ -344,6 +462,68 @@ nav ul li a:hover {
 .news-date .day { font-size: 20px; font-weight: bold; display: block; }
 .news-date .month { font-size: 11px; color: #f37022; }
 
+/* Photo Gallery Section */
+.gallery-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.gallery-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.badge-gallery {
+    background-color: #e6f0ff;
+    color: #0e2b5c;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    height: 220px;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(14, 43, 92, 0.9));
+    color: white;
+    padding: 15px 10px 10px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
 /* Admission Section */
 .admission-section {
     padding: 60px 20px;
@@ -380,6 +560,12 @@ nav ul li a:hover {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #f37022;
 }
 
 .submit-btn {
@@ -392,6 +578,7 @@ nav ul li a:hover {
     font-weight: bold;
     font-size: 16px;
     width: 100%;
+    transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover { background-color: #f37022; }
@@ -509,69 +696,15 @@ footer {
         text-align: center;
     }
     
+    .top-bar { gap: 10px; }
     .principal-image, .box { width: 100%; }
-    nav ul { flex-wrap: wrap; justify-content: center; }
-}
-/* ==========================================
-   GALLERY SECTION STYLES
-   ========================================== */
-.gallery-section {
-    padding: 60px 20px;
-    background-color: #ffffff;
-    width: 100%;
-}
+    
+    nav ul { 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        margin-top: 10px;
+    }
 
-.gallery-container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.badge-gallery {
-    background-color: #e6f0ff;
-    color: #0e2b5c;
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 12px;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 8px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.gallery-card {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    height: 220px;
-}
-
-.gallery-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.gallery-card:hover img {
-    transform: scale(1.08);
-}
-
-.gallery-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(14, 43, 92, 0.9));
-    color: white;
-    padding: 15px 10px 10px 10px;
-    font-size: 15px;
-    font-weight: 600;
-    text-align: center;
+    .hero-content h1 { font-size: 26px; }
+    .ai-container h2 { font-size: 24px; }
 }
