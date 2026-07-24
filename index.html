@@ -45,7 +45,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#news">News & Events</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#gallery" id="openGalleryBtn">Gallery</a></li>
                 <li><a href="#admission">Admission 2026-27</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
@@ -86,6 +86,53 @@
 
         <button class="slider-btn prev-btn" type="button">&#10094;</button>
         <button class="slider-btn next-btn" type="button">&#10095;</button>
+    </section>
+
+    <!-- AI & Future Technology Section -->
+    <section id="ai-education" class="ai-feature-section">
+        <div class="ai-container">
+            <span class="badge-ai">FUTURE-READY EDUCATION</span>
+            <h2>Empowering Students with AI-Integrated Education</h2>
+            <p class="ai-subtitle">
+                At <strong>Saheed Bhagat Singh International School</strong>, we combine strong core values with modern 
+                <strong>Artificial Intelligence (AI), Coding, and Interactive Digital Tools</strong> for students from Class 1st to 12th.
+            </p>
+
+            <div class="ai-grid">
+                <!-- 1. Foundation AI & Coding -->
+                <div class="ai-card">
+                    <div class="ai-card-image">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Logic & Coding Matrix">
+                    </div>
+                    <div class="ai-card-content">
+                        <h3>🧩 Foundation AI & Coding (Class 1st-8th)</h3>
+                        <p>Early exposure to computational thinking, block-based coding, and digital problem-solving logic.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Futuristic AI & Robotics -->
+                <div class="ai-card">
+                    <div class="ai-card-image">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Futuristic AI & Robotics">
+                    </div>
+                    <div class="ai-card-content">
+                        <h3>🤖 Advanced AI & Robotics (Class 9th-12th)</h3>
+                        <p>Hands-on practicals in Python programming, Artificial Intelligence models, and smart hardware integration.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Tech Graphic: Data & Smart Analytics -->
+                <div class="ai-card">
+                    <div class="ai-card-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Data & Neural Analytics">
+                    </div>
+                    <div class="ai-card-content">
+                        <h3>📊 Smart AI Analytics & Insights</h3>
+                        <p>Intelligent tracking tools to assess learning patterns and provide personalized academic progress.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Principal Message Section -->
@@ -156,6 +203,10 @@
 
         <div class="features">
             <div class="box">
+                <h3>🤖 AI & Future Tech Labs</h3>
+                <p>Preparing students for tomorrow with Artificial Intelligence, Coding & Smart Digital Learning Tools.</p>
+            </div>
+            <div class="box">
                 <h3>🔬 Modern Labs</h3>
                 <p>State-of-the-art computer and science labs for practical learning.</p>
             </div>
@@ -194,7 +245,8 @@
             </div>
         </div>
     </section>
-<!-- Photo Gallery Section -->
+
+    <!-- Photo Gallery Section -->
     <section id="gallery" class="gallery-section">
         <div class="gallery-container">
             <div class="section-title">
@@ -219,14 +271,15 @@
             </div>
         </div>
     </section>
+
     <!-- Admission Section -->
     <section id="admission" class="admission-section">
         <h2>Online Admission Registration (2026-2027)</h2>
-        <p>Apne bachhe ka registration krne ke liye niche दिए गए form को भरें।.</p>
+        <p>Apne bachhe ka registration krne ke liye niche दिए गए form को भरें। Ye data hamare paas save ho jayega.</p>
         
         <div class="form-container">
             <div id="successAlert" class="success-alert">
-                🎉 Registration Successful!  We will contact you soon. Thank You
+                🎉 Registration Successful! Aapka details hamare paas save ho gya hai. Ham jald hi aapse sampark krenge.
             </div>
             
             <form id="registrationForm">
@@ -317,11 +370,11 @@
             <span>&copy; 2026 Saheed Bhagat Singh International School. All Rights Reserved.</span>
             <!-- Visitor Counter Box -->
             <div class="visitor-count" style="margin-top: 10px; font-size: 13px; color: #f37022; font-weight: bold;">
-    👁️ Total Visitors: 
-    <a href="https://www.hitwebcounter.com" target="_blank" style="text-decoration: none;">
-        <img src="https://hitwebcounter.com/counter/counter.php?page= SBSIS_School_2026&style=0006&nbdigits=5&type=page&initcount=100" title="Counter Widget" Alt="Visit Counter" border="0" style="vertical-align: middle;" />
-    </a>
-</div>
+                👁️ Total Visitors: 
+                <a href="https://www.hitwebcounter.com" target="_blank" style="text-decoration: none;">
+                    <img src="https://hitwebcounter.com/counter/counter.php?page=SBSIS_School_2026&style=0006&nbdigits=5&type=page&initcount=100" title="Counter Widget" alt="Visit Counter" border="0" style="vertical-align: middle;" />
+                </a>
+            </div>
             <a class="admin-login-link" onclick="loginAdmin()">🔑 Admin Login</a>
         </div>
     </footer>
@@ -399,7 +452,7 @@
 
         function loginAdmin() {
             const password = prompt("Please enter School Admin Password:");
-            if (password === "Sbsis@2026") {
+            if (password === "sbsis@2026") {
                 sessionStorage.setItem('is_admin_logged_in', 'true');
                 document.getElementById('adminPanel').style.display = 'block';
                 renderLeads();
@@ -415,6 +468,15 @@
             alert("Admin Panel locked!");
         }
 
+        function escapeHTML(str) {
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
         function renderLeads() {
             const tableBody = document.getElementById('leadsTableBody');
             let leads = JSON.parse(localStorage.getItem('sbs_leads')) || [];
@@ -428,11 +490,11 @@
             leads.slice().reverse().forEach(lead => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${lead.dateTime}</td>
-                    <td><strong>${lead.name}</strong></td>
-                    <td>${lead.father}</td>
-                    <td><a href="tel:${lead.mobile}" style="color: #0e2b5c; font-weight: bold; text-decoration: none;">📞 ${lead.mobile}</a></td>
-                    <td><span style="background-color: #ffe6d5; color: #f37022; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 13px;">${lead.class}</span></td>
+                    <td>${escapeHTML(lead.dateTime)}</td>
+                    <td><strong>${escapeHTML(lead.name)}</strong></td>
+                    <td>${escapeHTML(lead.father)}</td>
+                    <td><a href="tel:${escapeHTML(lead.mobile)}" style="color: #0e2b5c; font-weight: bold; text-decoration: none;">📞 ${escapeHTML(lead.mobile)}</a></td>
+                    <td><span style="background-color: #ffe6d5; color: #f37022; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 13px;">${escapeHTML(lead.class)}</span></td>
                 `;
                 tableBody.appendChild(row);
             });
